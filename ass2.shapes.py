@@ -1,19 +1,24 @@
 #circle
-class CircleShape():
+class Circle:
+    """ creating a class name Circle shape"""
 
     def __init__(self, radius):
-        self.my_radius = radius
+        self.radius = radius
 
     def area(self):
-        return self.my_radius ** 2 * 3.14
+        """function represents area"""
+        return math.pi * (self.radius ** 2)
 
     def perimeter(self):
-        return 2 * self.my_radius * 3.14
+        """function represents perimeter"""
+        return 2 * math.pi * self.radius
 
 
-newCircle = CircleShape(8)
-print(newCircle.area())
-print(newCircle.perimeter())
+num = int(input("enter the radius of circle:"))
+newCircle = Circle(num)
+print("Area of circle:", round(newCircle.area(), 2))
+print("perimeter of circle:", round(newCircle.perimeter(), 2))
+
 
 #Rectangle
 class Rectangle():
@@ -43,10 +48,10 @@ def rhombusPeri(diagonal1 , diagonal2):
     return ("The perimeter of rhombus with diagonals", diagonal1, "and", diagonal2, "is", perimeter)
 
 if __name__ == '__main__':
-    diagonal1 = int(input(" enter the value of diagonal1:"))
-    diagonal2 = int(input(" enter the value of diagonal2:"))
-    print(rhombusArea(diagonal1 , diagonal2))
-    print(rhombusPeri(diagonal1,diagonal2))
+    side1 = int(input(" enter the value of diagonal1:"))
+    side2 = int(input(" enter the value of diagonal2:"))
+    print(rhombusArea(side1 , side2))
+    print(rhombusPeri(side1,side2))
 
 # Triangle
 class Triangle:
@@ -60,13 +65,13 @@ class Triangle:
         return (area * (area - num1) * (area - num2) * (area - num3)) ** 0.5
 
 
-num1 = float(input("Enter the first side of triangle:"))
-num2 = float(input("Enter the second side of triangle:"))
-num3 = float(input("Enter the third side of triangle:"))
+side1 = float(input("Enter the first side of triangle:"))
+side2 = float(input("Enter the second side of triangle:"))
+side3 = float(input("Enter the third side of triangle:"))
 
 newTriangle = Triangle()
 
-print("The perimeter of triangle is: {0:2f}".format(newTriangle.findPerimeter(num1, num2, num3)))
-print("The area of triangle is: {0:2f}".format(newTriangle.findArea(num1, num2, num3)))
+print("The perimeter of triangle is: {0:2f}".format(newTriangle.findPerimeter(side1, side2, side3)))
+print("The area of triangle is: {0:2f}".format(newTriangle.findArea(side1, side2, side3)))
    
 
