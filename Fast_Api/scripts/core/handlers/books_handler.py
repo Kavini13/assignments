@@ -32,22 +32,34 @@ def delete_book(title: str):
 
 def pipe_agg():
     pipeline = [
-        {
-            '$addFields': {
+         {{
+            '$group': {
+                '_id': {
+                    'name_author': '$author'
+                },
                 'total_price': {
-                    '$multiply': [
-                        '$quantity', '$price'
-                    ]
+                    '$sum': '$price'
+                }
+            }
+        }, {
+            '$project': {
+                '_id': 0,
+                'total_price': {
+                    '$sum': '$total_price'
                 }
             }
         }, {
             '$group': {
                 '_id': None,
-                'total_price': {
+                'sum': {
                     '$sum': '$total_price'
                 }
             }
-        }
+        }, {
+            '$project': {
+                '_id': 0
+            }
+        }}
     ]
 
     data = lib.aggregate(pipeline)
