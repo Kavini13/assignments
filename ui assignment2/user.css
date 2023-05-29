@@ -1,0 +1,83 @@
+/* Reset default styles for ul and li */
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Style for the navigation bar */
+.top-navbar {
+      background-color: #ddd;
+      padding: 2% 5%;
+      display: flex end;
+      justify-content: flex end;
+      align-items: right end;
+}
+.bottom-navbar {
+      background-color: #ff00ff;
+      padding: 2% 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size:200%;
+}
+
+.menu li {
+  display: inline-block;
+  padding:0%;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  box-sizing:content box;
+  overflow:hidden;
+}
+.menu li a:hover {
+  background-color: #ff00ff; /* Change the hover color here */
+  color: #ffffff; /* Change the text color on hover if needed */
+  border-color: #ff00ff; /* Change the border color on hover if needed */
+}
+
+summary {
+  display: inline-block left;
+  padding: 20px 20px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left:9px;
+}
+.user-name {
+  display: none;
+  font-weight: bold;
+}
+
+.top-navbar .menu {
+  display: flex;
+  align-items: center;
+}
+
+.top-navbar .menu li:last-child {
+  margin-left: auto;
+}
+
+.top-navbar .user-name {
+  display: inline;
+  margin-left: 50px;
+}
+body {
+  background-image: url("image6.avif");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  width:100%;
+  z-index:2;
+}
+
+
+
+
+

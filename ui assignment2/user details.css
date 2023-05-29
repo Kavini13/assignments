@@ -1,0 +1,31 @@
+.user-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ccc;
+}
+
+.user-list li:last-child {
+  border-bottom: none;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+.user-email {
+  color: #777;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
